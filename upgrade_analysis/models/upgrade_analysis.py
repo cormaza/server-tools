@@ -75,7 +75,8 @@ class UpgradeAnalysis(models.Model):
     def _get_remote_model(self, connection, model):
         self.ensure_one()
         if model == "record":
-            if float(self.config_id.version) < 14.0:
+            version_clean = self.config_id.version.split("+")[0] if self.config_id.version else "0.0"
+            if float(version_clean) < 14.0:
                 return connection.env["openupgrade.record"]
             else:
                 return connection.env["upgrade.record"]
@@ -593,8 +594,8 @@ class UpgradeAnalysis(models.Model):
         )
 
         file_name = "modules{}-{}.rst".format(
-            start_version.replace(".", ""),
-            end_version.replace(".", ""),
+            start_version.split("+")[0].replace(".", ""),
+            end_version.split("+")[0].replace(".", ""),
         )
 
         file_path = os.path.join(module_coverage_file_folder, file_name)

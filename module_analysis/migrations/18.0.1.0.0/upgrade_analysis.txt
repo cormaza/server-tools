@@ -1,0 +1,9 @@
+---Models in module 'module_analysis'---
+---Fields in module 'module_analysis'---
+---XML records in module 'module_analysis'---
+NEW ir.ui.view: module_analysis.view_ir_module_author_list
+NEW ir.ui.view: module_analysis.view_ir_module_type_list
+NEW ir.ui.view: module_analysis.view_ir_module_type_rule_list
+DEL ir.ui.view: module_analysis.view_ir_module_author_tree
+DEL ir.ui.view: module_analysis.view_ir_module_type_rule_tree
+DEL ir.ui.view: module_analysis.view_ir_module_type_tree

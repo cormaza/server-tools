@@ -1,0 +1,5 @@
+---Models in module 'auditlog'---
+---Fields in module 'auditlog'---
+auditlog     / auditlog.log             / res_ids (char)                : NEW
+auditlog     / auditlog.rule            / log_export_data (boolean)     : NEW hasdefault: default
+---XML records in module 'auditlog'---
